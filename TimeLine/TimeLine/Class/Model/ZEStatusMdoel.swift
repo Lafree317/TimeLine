@@ -10,7 +10,7 @@ import UIKit
 
 class ZEStatusMdoel: AVObject {
     var content:String?
-    var imageArr:Array<UIImage?> = []
+    var imageArr:Array<AVFile> = []
     
     internal var parseClassName:String{
         get{

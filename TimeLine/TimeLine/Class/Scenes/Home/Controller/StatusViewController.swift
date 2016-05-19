@@ -14,7 +14,13 @@ class StatusViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        XTStatusCloud.shareSingleOne.fetchStatusWithPage(page: 0) { (statusArr) in
+            
+            
+            
+            
+            
+        }
         
         // Do any additional setup after loading the view.
     }

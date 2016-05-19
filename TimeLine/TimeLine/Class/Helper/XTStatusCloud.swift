@@ -7,14 +7,12 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 typealias SaveBlock = (success:Bool,error:NSError?) -> Void
 typealias fetchStatusBlock = (statusArr:Array<ZEStatusMdoel>) -> Void
+
 let statusClassName = "StatusTimeLine"
-extension AVQuery {
-
-}
-
 
 class XTStatusCloud: NSObject {
     static let shareSingleOne = XTStatusCloud()
@@ -35,22 +33,35 @@ class XTStatusCloud: NSObject {
             callBack(success: success, error: error)
         }
         
-
-
     }
     
-    func fetchStatusWithPage(page:UInt,callBack:fetchStatusBlock) -> Void {
+    func fetchStatusWithPage(page page:UInt,callBack:fetchStatusBlock) -> Void {
         let query =  AVQuery(className: statusClassName)
         query.orderByAscending("creatAt");
+        query.includeKey("imageArr")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
-            var callBackArr:Array<ZEStatusMdoel> = []
-            let objectArr = objects as! [AVObject!]
-            for object in objectArr {
-                let model = ZEStatusMdoel.modelWithDictionary(object.dictionaryForObject() as [NSObject : AnyObject])
+            for object in objects {
+                let object = object as! AVObject
+                print(object["context"])
+                print(object["imageArr"])
+                let dic = object.dictionaryForObject() as [NSObject : AnyObject]
+         
+                let model = ZEStatusMdoel(className: statusClassName)
                 
-                callBackArr.append(model!)
+                let mdoel = ZEStatusMdoel(className:statusClassName, dictionary: dic)
+                print(mdoel["context"])
+                print(mdoel["imageArr"])
+                
+//                let json = JSON(object.dictionaryForObject())
+//                let context = json["context"].stringValue
+//                let imageArr = json["imageArr"]
+//                let avfileDic = imageArr[0].dictionaryObject
+//                
+//                let avobject =  AVObject(dictionary: avfileDic)
+//                let avfile = AVFile(AVObject:avobject)
+                
+
             }
-            callBack(statusArr: callBackArr)
         }
     }
 }
