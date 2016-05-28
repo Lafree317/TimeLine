@@ -11,21 +11,30 @@ import Photos
 
 class ZENewStatusewController: UIViewController,PhotoPickerControllerDelegate {
     
+    @IBOutlet weak var weaterFellButton: UIButton!
     var selectModel = [PhotoImageModel]()
     var containerView = UIView()
     var model = ZENewStatusModel()
     @IBOutlet weak var textView: UITextView!
     var triggerRefresh = false
-    
+    let startY:CGFloat = 150+30+64 // 底部选择图片开始的高度,150:TextView,30:Button,64:Navigation
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(self.containerView)
+        
         self.checkNeedAddButton()
         self.renderView()
     }
     
+    @IBAction func weaterFellButtonClick(sender: UIButton) {
+        UsefulPickerView.showMultipleColsPicker("今天的天气和心情?", data: [model.weaterArr,model.fellArr], defaultSelectedIndexs: [2,2]) { (selectedIndexs, selectedValues) in
+            let str = "天气:"+selectedValues[0] + "  " + "心情:" + selectedValues[1]
+            self.weaterFellButton.setTitle(str, forState: .Normal)
+            
+        }
+    }
     @IBAction func leftAction(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
         
@@ -36,6 +45,17 @@ class ZENewStatusewController: UIViewController,PhotoPickerControllerDelegate {
                
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // MARK: 以下为图片选择的代码
     private func checkNeedAddButton(){
         if self.selectModel.count < PhotoPickerController.imageMaxSelectedNum && !hasButton() {
             selectModel.append(PhotoImageModel(type: ModelType.Button, data: nil))
@@ -87,7 +107,7 @@ class ZENewStatusewController: UIViewController,PhotoPickerControllerDelegate {
     private func renderView(){
         
         if selectModel.count <= 0 {return;}
-        let startY:CGFloat = 150+64
+        
         let totalWidth = UIScreen.mainScreen().bounds.width
         let space:CGFloat = 10
         let lineImageTotal = 4

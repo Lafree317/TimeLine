@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+
 class ZENewStatusModel: NSObject {
     
     /**
@@ -17,10 +18,6 @@ class ZENewStatusModel: NSObject {
      - parameter modelAr: PhotoImageModel数组
      */
     func setStatus(text:String,modelAr:[PhotoImageModel]){
-        
-        
-     
-        
         // 存储图片data的数组
         var imageArr:Array<NSData> = []
         
@@ -54,26 +51,32 @@ class ZENewStatusModel: NSObject {
                 // 减一,挡住,等有signal时才会执行下一次for循环
                 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
             }
-            
-            
+
             // for循环里面的所有block都执行完了
             XTStatusCloud.shareSingleOne.saveNewStatus(dataArr: imageArr, context: text) { (success, error) in
                 
             }
         })
-    
-        
-        
-        
-        
-       
-        
- 
-       
-        
+
     }
+    let weaterArr = [
+        "云",
+        "雨",
+        "晴",
+        "雪",
+        "雾",
+        "风",
+    ]
+    let fellArr = [
+        "生气",
+        "伤心",
+        "开心",
+        "担忧",
+        "害怕",
+        "其他"
         
-        
+    ]
+    
             
 
 

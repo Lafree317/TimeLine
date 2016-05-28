@@ -14,11 +14,15 @@
 		525BD64B1CEC9ED200D7DE8F /* WildDogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD6311CEC9ED200D7DE8F /* WildDogHelper.swift */; };
 		525BD64C1CEC9ED200D7DE8F /* SwiftMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD6331CEC9ED200D7DE8F /* SwiftMacro.swift */; };
 		525BD64D1CEC9ED200D7DE8F /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD6381CEC9ED200D7DE8F /* StatusViewController.swift */; };
-		525BD64E1CEC9ED200D7DE8F /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD63A1CEC9ED200D7DE8F /* StatusModel.swift */; };
+		525BD64E1CEC9ED200D7DE8F /* ZEStatusVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD63A1CEC9ED200D7DE8F /* ZEStatusVCModel.swift */; };
 		525BD64F1CEC9ED200D7DE8F /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BD63C1CEC9ED200D7DE8F /* StatusCell.swift */; };
 		525BD6501CEC9ED200D7DE8F /* StatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525BD63D1CEC9ED200D7DE8F /* StatusCell.xib */; };
 		525BD6511CEC9ED200D7DE8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525BD6471CEC9ED200D7DE8F /* LaunchScreen.storyboard */; };
 		525BD6521CEC9ED200D7DE8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525BD6481CEC9ED200D7DE8F /* Main.storyboard */; };
+		525DA3A51CF000F500CF873C /* ZEHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525DA3A41CF000F500CF873C /* ZEHud.swift */; };
+		525DA3A71CF0011900CF873C /* ZERundom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525DA3A61CF0011900CF873C /* ZERundom.swift */; };
+		526C3E951CEEEBBA0084708E /* ZETableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3E941CEEEBBA0084708E /* ZETableViewModel.swift */; };
+		5287908E1CF047D30081409F /* TagMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5287908D1CF047D30081409F /* TagMacro.swift */; };
 		52977DA01CED74C400FC7F83 /* AlbumToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977D8A1CED74C400FC7F83 /* AlbumToolbarView.swift */; };
 		52977DA11CED74C400FC7F83 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977D8B1CED74C400FC7F83 /* ImageModel.swift */; };
 		52977DA21CED74C400FC7F83 /* NSIndexSet+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977D8C1CED74C400FC7F83 /* NSIndexSet+Extension.swift */; };
@@ -44,8 +48,18 @@
 		52977DBB1CED74EA00FC7F83 /* ZENewStatusewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DB71CED74EA00FC7F83 /* ZENewStatusewController.swift */; };
 		52977DBC1CED74EA00FC7F83 /* ZENewStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DB91CED74EA00FC7F83 /* ZENewStatusModel.swift */; };
 		52977DBE1CED750300FC7F83 /* XTStatusCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DBD1CED750300FC7F83 /* XTStatusCloud.swift */; };
-		52977DC01CED752900FC7F83 /* ZEStatusMdoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DBF1CED752900FC7F83 /* ZEStatusMdoel.swift */; };
+		52977DC01CED752900FC7F83 /* StatusMdoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DBF1CED752900FC7F83 /* StatusMdoel.swift */; };
 		52DD5E0D1CEC997600A921F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DD5E0C1CEC997600A921F2 /* Assets.xcassets */; };
+		52E99D651CF0A47B0044F187 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E99D641CF0A47B0044F187 /* SnapKit.framework */; };
+		52E99D661CF0A47B0044F187 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E99D641CF0A47B0044F187 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52F7546C1CF5497E0003B960 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F754641CF5497E0003B960 /* Area.plist */; };
+		52F7546D1CF5497E0003B960 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F754651CF5497E0003B960 /* City.plist */; };
+		52F7546E1CF5497E0003B960 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F754661CF5497E0003B960 /* Picker.swift */; };
+		52F7546F1CF5497E0003B960 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F754671CF5497E0003B960 /* PickerView.swift */; };
+		52F754701CF5497E0003B960 /* Province.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F754681CF5497E0003B960 /* Province.plist */; };
+		52F754711CF5497E0003B960 /* SelectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F754691CF5497E0003B960 /* SelectionTextField.swift */; };
+		52F754721CF5497E0003B960 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7546A1CF5497E0003B960 /* ToolBarView.swift */; };
+		52F754731CF5497E0003B960 /* UsefulPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7546B1CF5497E0003B960 /* UsefulPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +70,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				525BD62C1CEC9E0100D7DE8F /* SwiftyJSON.framework in Embed Frameworks */,
+				52E99D661CF0A47B0044F187 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,12 +84,16 @@
 		525BD6311CEC9ED200D7DE8F /* WildDogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildDogHelper.swift; sourceTree = "<group>"; };
 		525BD6331CEC9ED200D7DE8F /* SwiftMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMacro.swift; sourceTree = "<group>"; };
 		525BD6381CEC9ED200D7DE8F /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		525BD63A1CEC9ED200D7DE8F /* StatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		525BD63A1CEC9ED200D7DE8F /* ZEStatusVCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZEStatusVCModel.swift; sourceTree = "<group>"; };
 		525BD63C1CEC9ED200D7DE8F /* StatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 		525BD63D1CEC9ED200D7DE8F /* StatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCell.xib; sourceTree = "<group>"; };
 		525BD6471CEC9ED200D7DE8F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525BD6481CEC9ED200D7DE8F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		525BD6531CEC9FD900D7DE8F /* TimeLine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeLine-Bridging-Header.h"; sourceTree = "<group>"; };
+		525DA3A41CF000F500CF873C /* ZEHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZEHud.swift; sourceTree = "<group>"; };
+		525DA3A61CF0011900CF873C /* ZERundom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZERundom.swift; sourceTree = "<group>"; };
+		526C3E941CEEEBBA0084708E /* ZETableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZETableViewModel.swift; sourceTree = "<group>"; };
+		5287908D1CF047D30081409F /* TagMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagMacro.swift; sourceTree = "<group>"; };
 		52977D8A1CED74C400FC7F83 /* AlbumToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumToolbarView.swift; sourceTree = "<group>"; };
 		52977D8B1CED74C400FC7F83 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		52977D8C1CED74C400FC7F83 /* NSIndexSet+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexSet+Extension.swift"; sourceTree = "<group>"; };
@@ -100,10 +119,19 @@
 		52977DB71CED74EA00FC7F83 /* ZENewStatusewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZENewStatusewController.swift; sourceTree = "<group>"; };
 		52977DB91CED74EA00FC7F83 /* ZENewStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZENewStatusModel.swift; sourceTree = "<group>"; };
 		52977DBD1CED750300FC7F83 /* XTStatusCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XTStatusCloud.swift; sourceTree = "<group>"; };
-		52977DBF1CED752900FC7F83 /* ZEStatusMdoel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZEStatusMdoel.swift; sourceTree = "<group>"; };
+		52977DBF1CED752900FC7F83 /* StatusMdoel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMdoel.swift; sourceTree = "<group>"; };
 		52DD5E021CEC997500A921F2 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DD5E0C1CEC997600A921F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DD5E111CEC997600A921F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E99D641CF0A47B0044F187 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		52F754641CF5497E0003B960 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
+		52F754651CF5497E0003B960 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
+		52F754661CF5497E0003B960 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		52F754671CF5497E0003B960 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		52F754681CF5497E0003B960 /* Province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Province.plist; sourceTree = "<group>"; };
+		52F754691CF5497E0003B960 /* SelectionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTextField.swift; sourceTree = "<group>"; };
+		52F7546A1CF5497E0003B960 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		52F7546B1CF5497E0003B960 /* UsefulPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefulPickerView.swift; sourceTree = "<group>"; };
 		8E67797864CA59834FC0908C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51AFF138580A10490CFED65 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E99D651CF0A47B0044F187 /* SnapKit.framework in Frameworks */,
 				525BD62B1CEC9E0100D7DE8F /* SwiftyJSON.framework in Frameworks */,
 				424AAC301A9156E8F4552B34 /* libPods.a in Frameworks */,
 			);
@@ -156,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				525BD6331CEC9ED200D7DE8F /* SwiftMacro.swift */,
+				5287908D1CF047D30081409F /* TagMacro.swift */,
 				525BD6531CEC9FD900D7DE8F /* TimeLine-Bridging-Header.h */,
 			);
 			path = Macro;
@@ -164,7 +194,7 @@
 		525BD6341CEC9ED200D7DE8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52977DBF1CED752900FC7F83 /* ZEStatusMdoel.swift */,
+				52977DBF1CED752900FC7F83 /* StatusMdoel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +212,7 @@
 		525BD6361CEC9ED200D7DE8F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				526C3E931CEEEB9C0084708E /* ViewModel */,
 				525BD6371CEC9ED200D7DE8F /* Controller */,
 				525BD6391CEC9ED200D7DE8F /* Model */,
 				525BD63B1CEC9ED200D7DE8F /* View */,
@@ -200,7 +231,7 @@
 		525BD6391CEC9ED200D7DE8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				525BD63A1CEC9ED200D7DE8F /* StatusModel.swift */,
+				525BD63A1CEC9ED200D7DE8F /* ZEStatusVCModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,9 +298,28 @@
 		525BD6491CEC9ED200D7DE8F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				52F754631CF5497E0003B960 /* PickerViewSource */,
+				525DA3A31CF000F500CF873C /* ZEKit */,
 				52977D891CED74C400FC7F83 /* Core */,
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		525DA3A31CF000F500CF873C /* ZEKit */ = {
+			isa = PBXGroup;
+			children = (
+				525DA3A41CF000F500CF873C /* ZEHud.swift */,
+				525DA3A61CF0011900CF873C /* ZERundom.swift */,
+			);
+			path = ZEKit;
+			sourceTree = "<group>";
+		};
+		526C3E931CEEEB9C0084708E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				526C3E941CEEEBBA0084708E /* ZETableViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		52977D891CED74C400FC7F83 /* Core */ = {
@@ -327,6 +377,7 @@
 		52DD5DF91CEC997500A921F2 = {
 			isa = PBXGroup;
 			children = (
+				52E99D641CF0A47B0044F187 /* SnapKit.framework */,
 				525BD62A1CEC9E0100D7DE8F /* SwiftyJSON.framework */,
 				52DD5E041CEC997500A921F2 /* TimeLine */,
 				52DD5E031CEC997500A921F2 /* Products */,
@@ -351,6 +402,21 @@
 				52DD5E111CEC997600A921F2 /* Info.plist */,
 			);
 			path = TimeLine;
+			sourceTree = "<group>";
+		};
+		52F754631CF5497E0003B960 /* PickerViewSource */ = {
+			isa = PBXGroup;
+			children = (
+				52F754641CF5497E0003B960 /* Area.plist */,
+				52F754651CF5497E0003B960 /* City.plist */,
+				52F754661CF5497E0003B960 /* Picker.swift */,
+				52F754671CF5497E0003B960 /* PickerView.swift */,
+				52F754681CF5497E0003B960 /* Province.plist */,
+				52F754691CF5497E0003B960 /* SelectionTextField.swift */,
+				52F7546A1CF5497E0003B960 /* ToolBarView.swift */,
+				52F7546B1CF5497E0003B960 /* UsefulPickerView.swift */,
+			);
+			path = PickerViewSource;
 			sourceTree = "<group>";
 		};
 		966224CF59F67A9C1A48FFDC /* Pods */ = {
@@ -424,10 +490,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F7546D1CF5497E0003B960 /* City.plist in Resources */,
 				52DD5E0D1CEC997600A921F2 /* Assets.xcassets in Resources */,
 				52977DA51CED74C400FC7F83 /* PhotoAlbumTableViewCell.xib in Resources */,
+				52F754701CF5497E0003B960 /* Province.plist in Resources */,
 				525BD6521CEC9ED200D7DE8F /* Main.storyboard in Resources */,
 				52977DA71CED74C400FC7F83 /* photoCollectionViewCell.xib in Resources */,
+				52F7546C1CF5497E0003B960 /* Area.plist in Resources */,
 				525BD6511CEC9ED200D7DE8F /* LaunchScreen.storyboard in Resources */,
 				525BD6501CEC9ED200D7DE8F /* StatusCell.xib in Resources */,
 			);
@@ -493,11 +562,14 @@
 				52977DB21CED74C400FC7F83 /* PhotoPreviewViewController.swift in Sources */,
 				52977DAD1CED74C400FC7F83 /* PhotoPickerConfig.swift in Sources */,
 				52977DAF1CED74C400FC7F83 /* PhotoPreviewBottomBarView.swift in Sources */,
+				525DA3A71CF0011900CF873C /* ZERundom.swift in Sources */,
 				52977DA81CED74C400FC7F83 /* PhotoCollectionViewController.swift in Sources */,
+				5287908E1CF047D30081409F /* TagMacro.swift in Sources */,
+				525DA3A51CF000F500CF873C /* ZEHud.swift in Sources */,
 				525BD64A1CEC9ED200D7DE8F /* AppDelegate.swift in Sources */,
 				52977DBC1CED74EA00FC7F83 /* ZENewStatusModel.swift in Sources */,
 				525BD64C1CEC9ED200D7DE8F /* SwiftMacro.swift in Sources */,
-				525BD64E1CEC9ED200D7DE8F /* StatusModel.swift in Sources */,
+				525BD64E1CEC9ED200D7DE8F /* ZEStatusVCModel.swift in Sources */,
 				52977DAC1CED74C400FC7F83 /* PhotoImageModel.swift in Sources */,
 				52977DA91CED74C400FC7F83 /* PhotoFetchOptions.swift in Sources */,
 				52977DA31CED74C400FC7F83 /* PhotoAlbumsTableViewController.swift in Sources */,
@@ -509,15 +581,21 @@
 				52977DB41CED74C400FC7F83 /* UICollectionView+Extension.swift in Sources */,
 				52977DBB1CED74EA00FC7F83 /* ZENewStatusewController.swift in Sources */,
 				52977DBE1CED750300FC7F83 /* XTStatusCloud.swift in Sources */,
+				52F7546E1CF5497E0003B960 /* Picker.swift in Sources */,
+				52F754711CF5497E0003B960 /* SelectionTextField.swift in Sources */,
 				52977DA21CED74C400FC7F83 /* NSIndexSet+Extension.swift in Sources */,
-				52977DC01CED752900FC7F83 /* ZEStatusMdoel.swift in Sources */,
+				52977DC01CED752900FC7F83 /* StatusMdoel.swift in Sources */,
 				525BD64F1CEC9ED200D7DE8F /* StatusCell.swift in Sources */,
+				52F754731CF5497E0003B960 /* UsefulPickerView.swift in Sources */,
 				52977DAA1CED74C400FC7F83 /* PhotoImage.swift in Sources */,
 				52977DB11CED74C400FC7F83 /* PhotoPreviewToolbarView.swift in Sources */,
 				52977DA11CED74C400FC7F83 /* ImageModel.swift in Sources */,
+				52F754721CF5497E0003B960 /* ToolBarView.swift in Sources */,
 				52977DB01CED74C400FC7F83 /* PhotoPreviewCell.swift in Sources */,
 				52977DB31CED74C400FC7F83 /* SinglePhotoPreviewViewController.swift in Sources */,
+				526C3E951CEEEBBA0084708E /* ZETableViewModel.swift in Sources */,
 				52977DAE1CED74C400FC7F83 /* PhotoPickerController.swift in Sources */,
+				52F7546F1CF5497E0003B960 /* PickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

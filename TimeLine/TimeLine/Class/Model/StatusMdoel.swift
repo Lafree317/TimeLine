@@ -8,13 +8,7 @@
 
 import UIKit
 
-class ZEStatusMdoel: AVObject {
-    var content:String?
+class StatusMdoel: AVObject {
+    var context:String?
     var imageArr:Array<AVFile> = []
-    
-    internal var parseClassName:String{
-        get{
-            return "Student"
-        }
-    }
 }

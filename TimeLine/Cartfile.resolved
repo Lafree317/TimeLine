@@ -1,1 +1,2 @@
+github "SnapKit/SnapKit" "0.21.0"
 github "SwiftyJSON/SwiftyJSON" "2.3.3"

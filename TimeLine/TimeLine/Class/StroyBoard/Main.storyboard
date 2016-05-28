@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Status View Controller-->
+        <!--TimeLine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StatusViewController" customModule="TimeLine" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,13 +30,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="naO-cE-YJT" secondAttribute="bottom" id="vqI-Kd-52y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SKq-XI-kqB">
+                    <navigationItem key="navigationItem" title="TimeLine" id="SKq-XI-kqB">
+                        <barButtonItem key="leftBarButtonItem" id="vnX-Ql-vEG"/>
                         <barButtonItem key="rightBarButtonItem" title="新建" id="lps-O4-Rc9">
                             <connections>
-                                <segue destination="906-FF-fZ9" kind="show" id="EcX-ud-y5Z"/>
+                                <segue destination="906-FF-fZ9" kind="show" id="dP1-va-hNH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="naO-cE-YJT" id="RA0-YC-fw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,12 +57,75 @@
                     <view key="view" contentMode="scaleToFill" id="vtk-Pr-v1K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJf-cx-shf">
+                                <rect key="frame" x="154" y="214" width="221" height="30"/>
+                                <color key="backgroundColor" red="0.58039215690000001" green="0.60392156860000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="70b-id-oy4"/>
+                                    <constraint firstAttribute="height" constant="30" id="wFY-RN-bKd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="今天的天气&amp;心情怎么样?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="70b-id-oy4"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="weaterFellButtonClick:" destination="906-FF-fZ9" eventType="touchUpInside" id="979-lm-BJa"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXk-H5-6s8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GQb-6d-H82">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="FXr-Ql-GWP"/>
+                                        </constraints>
+                                        <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FXr-Ql-GWP"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GQb-6d-H82" firstAttribute="leading" secondItem="ZXk-H5-6s8" secondAttribute="leading" constant="8" id="1nV-u8-wYu"/>
+                                    <constraint firstAttribute="height" constant="150" id="BoR-kH-aR3"/>
+                                    <constraint firstAttribute="bottom" secondItem="GQb-6d-H82" secondAttribute="bottom" id="Zdz-1H-5UB"/>
+                                    <constraint firstAttribute="trailing" secondItem="GQb-6d-H82" secondAttribute="trailing" constant="8" id="fdu-mj-jG3"/>
+                                    <constraint firstItem="GQb-6d-H82" firstAttribute="top" secondItem="ZXk-H5-6s8" secondAttribute="top" id="ygF-Ri-dUj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZXk-H5-6s8" secondAttribute="trailing" id="2Ys-qL-LLd"/>
+                            <constraint firstItem="ZXk-H5-6s8" firstAttribute="top" secondItem="aVE-gE-Cxf" secondAttribute="bottom" id="3jX-zD-MIf"/>
+                            <constraint firstAttribute="trailing" secondItem="wJf-cx-shf" secondAttribute="trailing" id="8GE-rG-Ce7"/>
+                            <constraint firstItem="ZXk-H5-6s8" firstAttribute="leading" secondItem="vtk-Pr-v1K" secondAttribute="leading" id="ZjB-OW-Ty0"/>
+                            <constraint firstItem="wJf-cx-shf" firstAttribute="top" secondItem="ZXk-H5-6s8" secondAttribute="bottom" id="msu-bW-OU2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OB5-3g-aHA"/>
+                    <connections>
+                        <outlet property="textView" destination="GQb-6d-H82" id="ZBw-rv-AvR"/>
+                        <outlet property="weaterFellButton" destination="wJf-cx-shf" id="2db-ho-Pph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAb-Id-cCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588.5" y="393.5"/>
+            <point key="canvasLocation" x="1636" y="360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pjn-bx-Yl7">
