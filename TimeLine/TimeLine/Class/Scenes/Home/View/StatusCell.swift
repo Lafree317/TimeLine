@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class StatusCell: UITableViewCell {
 
     @IBOutlet weak var labelTopConstranints: NSLayoutConstraint!
@@ -27,6 +30,10 @@ class StatusCell: UITableViewCell {
     }
     func setDate(news:StatusMdoel){
         contextLabel.text = news.context
+        
+        
+        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

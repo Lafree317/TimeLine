@@ -50,6 +50,7 @@
 		52977DBE1CED750300FC7F83 /* XTStatusCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DBD1CED750300FC7F83 /* XTStatusCloud.swift */; };
 		52977DC01CED752900FC7F83 /* StatusMdoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977DBF1CED752900FC7F83 /* StatusMdoel.swift */; };
 		52DD5E0D1CEC997600A921F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DD5E0C1CEC997600A921F2 /* Assets.xcassets */; };
+		52E89A631CFACBF7006F11E9 /* StatusCellImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E89A621CFACBF7006F11E9 /* StatusCellImageView.swift */; };
 		52E99D651CF0A47B0044F187 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E99D641CF0A47B0044F187 /* SnapKit.framework */; };
 		52E99D661CF0A47B0044F187 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E99D641CF0A47B0044F187 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52F7546C1CF5497E0003B960 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F754641CF5497E0003B960 /* Area.plist */; };
@@ -123,6 +124,7 @@
 		52DD5E021CEC997500A921F2 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DD5E0C1CEC997600A921F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DD5E111CEC997600A921F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E89A621CFACBF7006F11E9 /* StatusCellImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCellImageView.swift; sourceTree = "<group>"; };
 		52E99D641CF0A47B0044F187 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		52F754641CF5497E0003B960 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
 		52F754651CF5497E0003B960 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				525BD63C1CEC9ED200D7DE8F /* StatusCell.swift */,
 				525BD63D1CEC9ED200D7DE8F /* StatusCell.xib */,
+				52E89A621CFACBF7006F11E9 /* StatusCellImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				52977DAD1CED74C400FC7F83 /* PhotoPickerConfig.swift in Sources */,
 				52977DAF1CED74C400FC7F83 /* PhotoPreviewBottomBarView.swift in Sources */,
 				525DA3A71CF0011900CF873C /* ZERundom.swift in Sources */,
+				52E89A631CFACBF7006F11E9 /* StatusCellImageView.swift in Sources */,
 				52977DA81CED74C400FC7F83 /* PhotoCollectionViewController.swift in Sources */,
 				5287908E1CF047D30081409F /* TagMacro.swift in Sources */,
 				525DA3A51CF000F500CF873C /* ZEHud.swift in Sources */,

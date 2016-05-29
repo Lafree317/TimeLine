@@ -48,3 +48,14 @@ class ZEStatusVCModel: NSObject,StatusProtocol {
         }
     }
 }
+
+protocol CellProtocol {
+    func imageTap()
+}
+
+extension StatusCellImageView:CellProtocol{
+    
+    func imageTap() {
+        
+    }
+}
